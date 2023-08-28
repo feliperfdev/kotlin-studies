@@ -10,7 +10,7 @@ fun main() {
     // Comparing with Dart, where we have: list.where((e) => e % 2 == 0);
     // in Kotlin we do not need to use an arrow function to get a list element, we just need to use the key `it`
 
-    // Read about lamdba expression syntax: https://kotlinlang.org/docs/lambdas.html#lambda-expression-syntax
+    // Read about lambda expression syntax: https://kotlinlang.org/docs/lambdas.html#lambda-expression-syntax
 
     println("Even numbers:")
     for (number: Int in evenNumbers) {
