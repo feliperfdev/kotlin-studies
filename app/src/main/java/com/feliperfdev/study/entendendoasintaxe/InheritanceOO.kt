@@ -1,6 +1,8 @@
 package com.feliperfdev.study.entendendoasintaxe
 
+// If a class can be inherited, we use de key-word 'open' before it
 open class Pokemon(val name: String, val power: Int, var hp: Int, var exp: Int) {
+    // if a class method can be overrided, we use ´open´ before it
     open fun battle(pokemon: Pokemon) {
         pokemon.hp -= power
         var result = pokemon.hp - power
@@ -17,7 +19,10 @@ open class Pokemon(val name: String, val power: Int, var hp: Int, var exp: Int) 
     }
 }
 
+// To inherit some class, we use the notation: class <FirstClass> : <SecondClass(...constructor)>
 class PokemonMegaEvolved(name: String, power: Int, hp: Int, exp: Int, val megastone: String) : Pokemon(name, power, hp, exp) {
+
+    // overrided class methods use the 'override' key-word before
     override fun battle(pokemon: Pokemon) {
         pokemon.hp -= (power * 2)
         var result = pokemon.hp - (power * 2)
