@@ -40,4 +40,19 @@ fun main() {
     println()
     print("Sum: $sum")
 
+    // ===================================================================================================
+
+    println()
+    println()
+    var pokemonList = mutableListOf<String>("Infernape", "Sylveon", "Greninja", "Tsareena", "Hydreagon", "Luxray")
+
+    for (pokemon: String in pokemonList) {
+        if (!pokemon.contains('a')) {
+            print("$pokemon 🌸")
+            println()
+        } else {
+            println(pokemon.uppercase())
+        }
+    }
+
 }
