@@ -11,7 +11,7 @@ open class Pokemon(val name: String, val power: Int, var hp: Int, var exp: Int) 
         println("================= STATUS ==================")
         print("$name: HP: $hp | EXP: $exp\n")
         print("${pokemon.name}: HP: ${pokemon.hp} | EXP: ${pokemon.exp}\n\n")
-        var resultEXP = (result / 2).toInt()
+        var resultEXP: Int = (result / 2)
         exp += resultEXP
         println("${pokemon.name} perdeu $result de HP!")
         println("$name ganhou $resultEXP de EXP! | Total: $exp")
@@ -20,7 +20,7 @@ open class Pokemon(val name: String, val power: Int, var hp: Int, var exp: Int) 
 }
 
 // To inherit some class, we use the notation: class <FirstClass> : <SecondClass(...constructor)>
-class PokemonMegaEvolved(name: String, power: Int, hp: Int, exp: Int, val megastone: String) : Pokemon(name, power, hp, exp) {
+class PokemonMegaEvolved(name: String, power: Int, hp: Int, exp: Int, private val megastone: String) : Pokemon(name, power, hp, exp) {
 
     // overrided class methods use the 'override' key-word before
     override fun battle(pokemon: Pokemon) {
@@ -31,7 +31,7 @@ class PokemonMegaEvolved(name: String, power: Int, hp: Int, exp: Int, val megast
         println("================= STATUS ==================")
         print("$name - $megastone: HP: $hp | EXP: $exp\n")
         print("${pokemon.name}: HP: ${pokemon.hp} | EXP: ${pokemon.exp}\n\n")
-        var resultEXP = (result / 2).toInt()
+        var resultEXP: Int = (result / 2)
         exp += resultEXP
         println("${pokemon.name} perdeu $result de HP!")
         println("$name ganhou $resultEXP de EXP! | Total: $exp")
