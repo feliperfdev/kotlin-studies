@@ -17,11 +17,9 @@ fun showStateString(state: GetUserState) {
     }
 
     if (state is GetUserLoadingState) {
-        if (state.isLoading) {
-            println("Is loading")
-        } else {
-            println("Is not loading")
-        }
+        // In Kotlin it`s recommended not to use the 'ternary' expression ? :
+        // but the if else `inline`:
+        println(if (state.isLoading) "Is loading" else "Is not loading")
     }
 
     if (state is GetUserErrorState) {
