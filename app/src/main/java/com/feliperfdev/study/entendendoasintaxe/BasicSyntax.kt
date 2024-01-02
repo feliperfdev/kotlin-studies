@@ -55,4 +55,16 @@ fun main() {
         }
     }
 
+    // ===================================================================================================
+
+    println()
+    println()
+
+    var numberList = mutableListOf(1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+
+    var sinList = numberList.map { Math.sin(it.toDouble()) }.toList()
+    for (sin: Double in sinList) {
+        println(sin)
+    }
+
 }
