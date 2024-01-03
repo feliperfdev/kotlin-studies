@@ -14,9 +14,11 @@ fun main() {
     var response = asyncFlow()
 
     response.forEach { println(it) }
+    response.forEach {group -> println(group) } // an other way to use named param like `it`
+    // same from dart: list.map((group) => print(group));
 
-    kpopList.asSequence().forEach {
+    kpopList.asSequence().forEach {kpopGroup ->
         Thread.sleep(300)
-        println(it.lowercase())
+        println(kpopGroup.lowercase())
     }
 }
