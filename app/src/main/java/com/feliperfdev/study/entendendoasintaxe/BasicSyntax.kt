@@ -1,5 +1,7 @@
 package com.feliperfdev.study.entendendoasintaxe
 
+import kotlin.math.sin
+
 
 fun main() {
     var numbers: List<Int> = listOf(1, 2, 3, 4, 5, 6, 7, 8, 9)
@@ -62,9 +64,15 @@ fun main() {
 
     var numberList = mutableListOf(1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
 
-    var sinList = numberList.map { Math.sin(it.toDouble()) }.toList()
+    var sinList = numberList.map { sin(it.toDouble()) }.toList()
     for (sin: Double in sinList) {
         println(sin)
     }
+
+    println()
+    println()
+
+    var sinFiltered = sinList.filter { sinValue -> sinValue > 0 }
+    sinFiltered.forEach { println(it) }
 
 }

@@ -1,6 +1,6 @@
 package com.feliperfdev.study.entendendoasintaxe
 
-var kpopList = mutableListOf<String>("BLACKPINK", "MAMAMOO", "TWICE", "(G)-idle", "GIRLS GENERATION", "KEP1ER")
+var kpopList: MutableList<String> = mutableListOf("BLACKPINK", "MAMAMOO", "TWICE", "(G)-idle", "GIRLS GENERATION", "KEP1ER")
 
 fun asyncFlow(): Sequence<String> = sequence {
     for (i in kpopList) {
